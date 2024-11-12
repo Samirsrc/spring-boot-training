@@ -5,8 +5,20 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="alien" class="org.example.Alien" scope="prototype">
+    <bean id="alien" class="org.example.Alien" scope="singleton">
+        <!--       <property name="age" value="88"/>-->
+<!--        <property name="lap" ref="lap"/>-->
+
+<!--        <constructor-arg type="org.example.Laptop" ref="lap"/>-->
+<!--        <constructor-arg type="int" value="96"/>-->
+
+<!--        <constructor-arg index="1" ref="lap"/>-->
+<!--    <constructor-arg index="0" value="25"/>-->
+        <constructor-arg name="lap" ref='lap'/>
+        <constructor-arg name="age" value="7"/>
 
     </bean>
+
+    <bean id="lap" class="org.example.Laptop"> </bean>
 </beans>
 
