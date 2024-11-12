@@ -12,12 +12,18 @@ public class App
     public static void main( String[] args )
     {
 
-        System.out.println("before context");
+
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-        System.out.println("before get bean and after context");
+
         Alien obj1 = (Alien) context.getBean("alien");
-        System.out.println("after get bean");
+  obj1.age=26;
+
         obj1.code();
+        System.out.println(obj1.age);
+        Alien obj2=(Alien) context.getBean("alien");
+        obj2.code();
+        System.out.println(obj2.age);
+
 
     }
 }
