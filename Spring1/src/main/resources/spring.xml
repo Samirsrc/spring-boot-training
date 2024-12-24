@@ -19,7 +19,7 @@
 
       </bean>
 
-      <bean id="comp" class="org.example.Laptop"> </bean>
-    <bean id="comp2" class="org.example.Desktop"> </bean>
+      <bean id="comp" class="org.example.Laptop" primary="true" lazy-init="true"> </bean>
+    <bean class="org.example.Desktop"> </bean>
   </beans>
 
