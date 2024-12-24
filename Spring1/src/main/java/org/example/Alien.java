@@ -4,11 +4,11 @@ import java.beans.ConstructorProperties;
 
 public class Alien {
 int age;
-Laptop lap;
+Computer comp;
 @ConstructorProperties({"age","lap"})
-   public Alien(int age, Laptop lap) {
+   public Alien(int age, Computer comp) {
        this.age = age;
-        this.lap = lap;
+        this.comp = comp;
     }
 
     Alien(){
@@ -16,15 +16,17 @@ Laptop lap;
     }
     public void code(){
         System.out.println("Coding");
+        comp.compile();
+
     }
 
-    public Laptop getLap() {
-        return lap;
+    public Computer getComp() {
+        return comp;
     }
 
-    public void setLap(Laptop lap) {
-        this.lap = lap;
-    }
+    public void setComp(Computer comp) {
+        this.comp = comp;
+           }
 
     public int getAge() {
         return age;
