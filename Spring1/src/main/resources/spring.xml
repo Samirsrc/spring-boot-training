@@ -7,7 +7,9 @@
     <!-- bean definitions here -->
     <bean id="alien" class="org.example.Alien" scope="singleton" autowire="byName">
              <property name="age" value="88"/>
-    <!--  <property name="comp" ref="lap"/>-->
+     <property name="comp">
+         <bean id="comp" class="org.example.Laptop" primary="true" lazy-init="true"> </bean>
+     </property>
 
 <!--        <constructor-arg type="org.example.Laptop" ref="lap"/>-->
 <!--        <constructor-arg type="int" value="96"/>-->
@@ -19,7 +21,7 @@
 
       </bean>
 
-      <bean id="comp" class="org.example.Laptop" primary="true" lazy-init="true"> </bean>
+     <!-- <bean id="comp" class="org.example.Laptop" primary="true" lazy-init="true"> </bean>-->
     <bean class="org.example.Desktop"> </bean>
   </beans>
 
