@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Scope;
 @Configuration
 public class AppConfig {
     @Bean ({"Desk","PC fix"})
-    @Scope
     public Desktop desktop(){
         System.out.println("wow");
         return new Desktop();
