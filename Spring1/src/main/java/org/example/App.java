@@ -16,9 +16,12 @@ public class App
 
 
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        Desktop desk = context.getBean("PC fix",Desktop.class);
-        desk.compile();
-
+       // Desktop desk = context.getBean("PC fix",Desktop.class);
+       // desk.compile();
+       // Desktop desk2 = context.getBean("PC fix",Desktop.class);
+       // desk2.compile();
+          Alien obj1 = context.getBean(Alien.class);
+          obj1.code();
 //        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 //
 //        Alien obj1 = (Alien) context.getBean("alien", Alien.class);

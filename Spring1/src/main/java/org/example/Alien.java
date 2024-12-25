@@ -11,7 +11,7 @@ Computer comp;
         this.comp = comp;
     }
 
-    Alien(){
+    public Alien(){
         System.out.println("object created");
     }
     public void code(){
