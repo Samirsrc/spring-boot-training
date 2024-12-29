@@ -13,27 +13,27 @@ import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class AppConfig {
-    @Bean ({"Desk","PC fix"})
-    //@Scope ("prototype")
-    public Desktop desktop(){
-        System.out.println("wow");
-        return new Desktop();
-    }
-@Primary
-    @Bean ({"Lap","Portable"})
-    //@Scope ("prototype")
-    public Laptop laptop(){
-        System.out.println("waw");
-        return new Laptop();
-    }
-    @Bean
-    public Alien alien(@Qualifier("Desk") Computer comp){
-        System.out.println("Alien bean created");
-        Alien obj = new Alien();
-        obj.setAge(26);
-        obj.setComp(comp);
-
-        return obj;
-
-    }
+//    @Bean ({"Desk","PC fix"})
+//    //@Scope ("prototype")
+//    public Desktop desktop(){
+//        System.out.println("wow");
+//        return new Desktop();
+//    }
+//@Primary
+//    @Bean ({"Lap","Portable"})
+//    //@Scope ("prototype")
+//    public Laptop laptop(){
+//        System.out.println("waw");
+//        return new Laptop();
+//    }
+//    @Bean
+//    public Alien alien(@Qualifier("Desk") Computer comp){
+//        System.out.println("Alien bean created");
+//        Alien obj = new Alien();
+//        obj.setAge(26);
+//        obj.setComp(comp);
+//
+//        return obj;
+//
+//    }
 }
