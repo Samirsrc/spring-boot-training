@@ -27,7 +27,7 @@ public class App
 //        Alien obj1 = (Alien) context.getBean("alien", Alien.class);
 //
 //        obj1.code();
-//        System.out.println(obj1.age);
+   System.out.println(obj1.age);
 //        obj1.code();
 //
 //        Alien obj2=(Alien) context.getBean("alien");

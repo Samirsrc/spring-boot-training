@@ -2,24 +2,30 @@ package org.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.beans.ConstructorProperties;
+
 @Component
 public class Alien {
-int age;
 
-Computer comp;
-@ConstructorProperties({"age","lap"})
-   public Alien(int age, Computer comp) {
-       this.age = age;
+    @Value("26")
+    int age;
+
+    Computer comp;
+
+    @ConstructorProperties({"age", "lap"})
+    public Alien(int age, Computer comp) {
+        this.age = age;
         this.comp = comp;
     }
 
-    public Alien(){
+    public Alien() {
         System.out.println("object created");
     }
-    public void code(){
+
+    public void code() {
         System.out.println("Coding");
         comp.compile();
 
@@ -28,11 +34,12 @@ Computer comp;
     public Computer getComp() {
         return comp;
     }
-@Autowired
-@Qualifier("laptop")
+
+    @Autowired
+    @Qualifier("laptop")
     public void setComp(Computer comp) {
         this.comp = comp;
-           }
+    }
 
     public int getAge() {
         return age;
