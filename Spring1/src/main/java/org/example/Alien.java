@@ -1,11 +1,14 @@
 package org.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.beans.ConstructorProperties;
 @Component
 public class Alien {
 int age;
+
 Computer comp;
 @ConstructorProperties({"age","lap"})
    public Alien(int age, Computer comp) {
@@ -25,7 +28,8 @@ Computer comp;
     public Computer getComp() {
         return comp;
     }
-
+@Autowired
+@Qualifier("laptop")
     public void setComp(Computer comp) {
         this.comp = comp;
            }
