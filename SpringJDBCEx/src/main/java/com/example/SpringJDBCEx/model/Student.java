@@ -6,6 +6,15 @@ import org.springframework.stereotype.Component;
 @Component
 @Scope("prototype")
 public class Student {
+    @Override
+    public String toString() {
+        return "Student{" +
+                "rollNo=" + rollNo +
+                ", name='" + name + '\'' +
+                ", marks=" + marks +
+                '}';
+    }
+
     private int rollNo;
     private String name;
     private int marks;
