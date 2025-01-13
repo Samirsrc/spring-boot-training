@@ -9,12 +9,11 @@ import java.io.PrintWriter;
 
 //@WebServlet("/hello")
 public class HelloServlet extends HttpServlet {
-    public void service(HttpServletRequest req, HttpServletResponse res) throws IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         System.out.println("In service ");
+        res.setContentType("text/html");
         PrintWriter out = res.getWriter();
-        out.println("ok je vois");
-        
-
+        out.println("<h2><b>ok je vois</b><h2>");
     }
 }
 
